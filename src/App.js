@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 // import Products from './components/Products'
 // import AboutUs from './components/AboutUs'
@@ -28,7 +28,8 @@ const App = () => {
         <ProtuctedRoute exact path='/checkout' component={CheckOut } />
         <ProtuctedRoute exact path='/orders' component={Orders } />
         <Route exact path='/not-found' component={NotFound} />
-        <Route path='*' component={NotFound} />
+        <Redirect from='/' exact to='/home' />
+        <Route  component={NotFound} />
       </Switch> 
     </div>
     </div>
