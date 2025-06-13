@@ -121,8 +121,8 @@ const Cart = () => {
       case apiStatusContext.inProgress:
         return <div className='loading-view'>
           <ul>
-            {Array.from({ length: 5 }).map(item => (
-              <li key={item.cartId} className='cart-item'>
+            {Array.from({ length: 4 }).map(item => (
+              <li className='cart-item'>
                 <Skeleton className='cart-skeleton' />
                 <Skeleton className='cart-skeleton-2' />
                 <Skeleton className='cart-skeleton-2' />
