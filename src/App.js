@@ -22,14 +22,13 @@ const App = () => {
       <Switch>
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
-        <ProtuctedRoute exact path='/' component={Home } />
+        <ProtuctedRoute exact path='/' component={Home} />
         <ProtuctedRoute exact path='/cart' component={Cart} />
-        <ProtuctedRoute exact path='/profile' component = {Profile} />
-        <ProtuctedRoute exact path='/checkout' component={CheckOut } />
-        <ProtuctedRoute exact path='/orders' component={Orders } />
+        <ProtuctedRoute exact path='/profile' component={Profile} />
+        <ProtuctedRoute exact path='/checkout' component={CheckOut} />
+        <ProtuctedRoute exact path='/orders' component={Orders} />
         <Route exact path='/not-found' component={NotFound} />
-        <Redirect from='/' exact to='/home' />
-        <Route  component={NotFound} />
+        <Route path='*' component={NotFound} />
       </Switch> 
     </div>
     </div>
