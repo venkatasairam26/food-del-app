@@ -13,7 +13,7 @@ import Register from './Register'
 import Profile from './components/Profile'
 import CheckOut from './components/CheckOut'
 import Orders from './components/Orders'
-
+import NotFound from './components/Not-Found'
 
 const App = () => {
   return (
@@ -27,6 +27,8 @@ const App = () => {
         <ProtuctedRoute exact path='/profile' component = {Profile} />
         <ProtuctedRoute exact path='/checkout' component={CheckOut } />
         <ProtuctedRoute exact path='/orders' component={Orders } />
+        <Route exact path='/not-found' component={NotFound} />
+        <Route path='*' component={NotFound} />
       </Switch> 
     </div>
     </div>
